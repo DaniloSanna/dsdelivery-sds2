@@ -44,7 +44,13 @@ public class Order implements Serializable{
 		this.moment = moment;
 		this.status = status;
 	}
-
+	public Order(String address, Double latitude, Double longitude, Instant moment, OrderStatus status) {
+		this.address = address;
+		this.latitude = latitude;
+		this.longitude = longitude;
+		this.moment = moment;
+		this.status = status;
+	}
 	public long getId() {return id;}
 	public void setId(long id) {this.id = id;}
 	public String getAddress() {return address;}
