@@ -18,6 +18,7 @@ import javax.persistence.Table;
 @Table(name= "tb_order")
 public class Order implements Serializable{
 	private static final long serialVersionUID = 1L;
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
@@ -44,6 +45,8 @@ public class Order implements Serializable{
 		this.moment = moment;
 		this.status = status;
 	}
+	
+	//Métido construtor2 para OrderService Insert
 	public Order(String address, Double latitude, Double longitude, Instant moment, OrderStatus status) {
 		this.address = address;
 		this.latitude = latitude;
